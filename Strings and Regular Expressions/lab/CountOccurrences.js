@@ -1,7 +1,13 @@
 function countOccurrences(str, text) {
-    let tokens = [
-        ['pesho', 'gmail.com'],
-    ['gosho', 'abv.bg']
-    ];
-    console.log(tokens.map(([username, domain]) => user));
+    let currentIndex = 0;
+    let occurrences = 0;
+    while ((currentIndex = text.indexOf(str, currentIndex)) >= 0) {
+        occurrences++;
+        currentIndex++;
+    }
+    return occurrences;
 }
+
+console.log(countOccurrences(
+    "the",
+    "the quick brown fox jumps over the lazy dog"));
